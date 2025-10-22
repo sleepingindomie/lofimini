@@ -198,43 +198,6 @@ All sounds are generated in real-time using the **Web Audio API**:
 
 ---
 
-## 🎨 Design System
-
-### Color Palette
-
-<table>
-<tr>
-<td align="center" width="25%">
-  <img src="https://via.placeholder.com/100/0f172a/FFFFFF?text=+" alt="bg"/>
-  <br/>
-  <code>#0f172a</code>
-  <br/>
-  <small>Background</small>
-</td>
-<td align="center" width="25%">
-  <img src="https://via.placeholder.com/100/3b82f6/FFFFFF?text=+" alt="primary"/>
-  <br/>
-  <code>#3b82f6</code>
-  <br/>
-  <small>Primary Blue</small>
-</td>
-<td align="center" width="25%">
-  <img src="https://via.placeholder.com/100/a78bfa/FFFFFF?text=+" alt="secondary"/>
-  <br/>
-  <code>#a78bfa</code>
-  <br/>
-  <small>Purple Accent</small>
-</td>
-<td align="center" width="25%">
-  <img src="https://via.placeholder.com/100/06b6d4/FFFFFF?text=+" alt="accent"/>
-  <br/>
-  <code>#06b6d4</code>
-  <br/>
-  <small>Cyan Accent</small>
-</td>
-</tr>
-</table>
-
 ### UI Components
 
 - **Glassmorphism Cards** - Frosted glass effect with backdrop blur
@@ -246,8 +209,7 @@ All sounds are generated in real-time using the **Web Audio API**:
 
 ## 🚀 Demo
 
-<!-- Add your demo link here -->
-> 🔗 **Live Demo**: [Coming Soon]()
+> 🔗 **(https://lofimini.vercel.app/)**: [Lo-Fi Mini]()
 
 ### 📸 Screenshots
 
