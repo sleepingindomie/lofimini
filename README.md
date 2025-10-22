@@ -209,7 +209,7 @@ All sounds are generated in real-time using the **Web Audio API**:
 
 ## 🚀 Demo
 
-> 🔗 **[Live Demo]**: [Lo-Fi Mini]((https://lofimini.vercel.app/))
+> 🔗 **Live Demo**: [LofiMini Demo](https://lofimini.vercel.app/)
 
 ### 📸 Screenshots
 
