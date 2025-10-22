@@ -285,7 +285,7 @@ All sounds are generated in real-time using the **Web Audio API**:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/lofimini.git
+git clone https://github.com/sleepingindomie/lofimini.git
 
 # Navigate to project directory
 cd lofimini
@@ -825,12 +825,12 @@ of this software and associated documentation files...
 
 ### Got questions or feedback?
 
-[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/yourusername/lofimini/issues)
-[![Email](https://img.shields.io/badge/Email-Contact-blue?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
+[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/sleepingindomie/lofimini/issues)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/sleepingindomie/lofimini)
 
-<!-- Add your social links -->
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
+<!-- Add your social links if needed -->
+<!-- [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourusername) -->
+<!-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername) -->
 
 </div>
 
@@ -840,8 +840,8 @@ of this software and associated documentation files...
 
 If you find this project helpful, please consider giving it a star!
 
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/lofimini?style=social)](https://github.com/yourusername/lofimini)
-[![GitHub Forks](https://img.shields.io/github/forks/yourusername/lofimini?style=social)](https://github.com/yourusername/lofimini/fork)
+[![GitHub Stars](https://img.shields.io/github/stars/sleepingindomie/lofimini?style=social)](https://github.com/sleepingindomie/lofimini)
+[![GitHub Forks](https://img.shields.io/github/forks/sleepingindomie/lofimini?style=social)](https://github.com/sleepingindomie/lofimini/fork)
 
 ---
 

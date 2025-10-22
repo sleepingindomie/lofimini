@@ -17,11 +17,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/lofimini.git"
+    "url": "https://github.com/sleepingindomie/lofimini.git"
   },
-  "homepage": "https://github.com/yourusername/lofimini#readme",
+  "homepage": "https://github.com/sleepingindomie/lofimini#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/lofimini/issues"
+    "url": "https://github.com/sleepingindomie/lofimini/issues"
   },
   "private": true,
   "type": "module",
