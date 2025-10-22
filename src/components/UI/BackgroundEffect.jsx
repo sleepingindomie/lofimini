@@ -1,8 +1,23 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const BackgroundEffect = () => {
-  // Reduced stars for better performance (50 instead of 150)
-  const stars = Array.from({ length: 50 }, (_, i) => ({
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Reduce stars on mobile for better performance
+  const starCount = isMobile ? 20 : 50;
+  const stars = Array.from({ length: starCount }, (_, i) => ({
     id: i,
     size: Math.random() * 2 + 1,
     x: Math.random() * 100,
@@ -12,8 +27,9 @@ const BackgroundEffect = () => {
     opacity: Math.random() * 0.6 + 0.3,
   }));
 
-  // Reduced shooting stars (2 instead of 3)
-  const shootingStars = Array.from({ length: 2 }, (_, i) => ({
+  // Disable shooting stars on mobile to reduce flickering
+  const shootingStarCount = isMobile ? 0 : 2;
+  const shootingStars = Array.from({ length: shootingStarCount }, (_, i) => ({
     id: i,
     startX: Math.random() * 100,
     startY: Math.random() * 50,
@@ -21,9 +37,9 @@ const BackgroundEffect = () => {
   }));
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10" style={{ transform: 'translate3d(0,0,0)' }}>
       {/* Static dark gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-night-sky via-slate-900/40 to-purple-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-night-sky via-slate-900/40 to-purple-950/30" style={{ willChange: 'auto' }} />
 
       {/* Moon - simpler version */}
       <div className="absolute top-20 right-24 w-16 h-16">
@@ -50,11 +66,13 @@ const BackgroundEffect = () => {
             height: star.size,
             left: `${star.x}%`,
             top: `${star.y}%`,
+            willChange: isMobile ? 'auto' : 'opacity',
+            transform: 'translate3d(0,0,0)',
           }}
-          animate={{
+          animate={isMobile ? {} : {
             opacity: [star.opacity * 0.4, star.opacity, star.opacity * 0.4],
           }}
-          transition={{
+          transition={isMobile ? {} : {
             duration: star.duration,
             repeat: Infinity,
             delay: star.delay,
@@ -95,31 +113,37 @@ const BackgroundEffect = () => {
         </motion.div>
       ))}
 
-      {/* Ambient glow orbs - Simplified and reduced opacity */}
-      <motion.div
-        className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.15, 1],
-          opacity: [0.05, 0.08, 0.05],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
-      <motion.div
-        className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"
-        animate={{
-          scale: [1.15, 1, 1.15],
-          opacity: [0.08, 0.05, 0.08],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
+      {/* Ambient glow orbs - Disabled on mobile to prevent flickering */}
+      {!isMobile && (
+        <>
+          <motion.div
+            className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"
+            style={{ willChange: 'transform, opacity', transform: 'translate3d(0,0,0)' }}
+            animate={{
+              scale: [1, 1.15, 1],
+              opacity: [0.05, 0.08, 0.05],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"
+            style={{ willChange: 'transform, opacity', transform: 'translate3d(0,0,0)' }}
+            animate={{
+              scale: [1.15, 1, 1.15],
+              opacity: [0.08, 0.05, 0.08],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+        </>
+      )}
     </div>
   );
 };
